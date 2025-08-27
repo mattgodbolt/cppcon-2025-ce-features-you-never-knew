@@ -7,6 +7,14 @@
   justify-content: center;
 }
 
+div.col2 {
+  display: flex;
+}
+
+div.col2 > div {
+  flex: 1;
+}
+
 .flex-around {
   display: flex;
   justify-content: space-around;
