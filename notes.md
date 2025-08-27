@@ -6,8 +6,26 @@ Remember when Compiler Explorer just showed assembly code? Those innocent days a
 
 We'll uncover the features hiding in plain sight: arbitrary subdomain URLs (badger.godbolt.org works!), keyboard shortcuts that make you look like a wizard, and the optimization pipeline viewer that shows exactly how -O3 turns your careful algorithms into three assembly instructions. I'll reveal how every short link lasts forever, how we safely run arbitrary code from the internet, and how we squeeze 80+ languages into $3,000/month of infrastructure. Whether you're a CE power user or someone who just discovered the Executor view, you'll learn about some pretty cool features you never knew existed! (Honestly neither did I until I started preparing this talk!)
 
+---
+
+Broad plan:
+- 5m Intro, me and CE
+- 40m UI overview - JUICY MEAT THIS IS WHAT PEOPLE ARE HERE FOR
+  - 10m Overview, all the main parts
+  - 5-10m Execution, settings therein. CUDA & ARM
+  - 5m Analysis tooling
+  - 5m IDE mode  
+  - 5m Misc trivia
+- 5m Behind the scenes (WATCH TIME)
+  - Overview
+  - goo.gl
+- 10m QUESTIONS and buffer (lots of live demos)
+
+---
 
 ### Claude's suggestions
+
+(mostly ignored but kept for posterity)
 
 ## Major Features to Demo (35 minutes)
 

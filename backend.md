@@ -1,4 +1,8 @@
-## backend diagram
+## Behind the Scenes
+
+---
+
+<img src="images/ce-system.svg" class="r-stretch">
 
 ---
 
@@ -9,3 +13,4 @@
 - queueing
 - windows support
 - Ubuntu 24 migration
+- "goo.gl" links issue

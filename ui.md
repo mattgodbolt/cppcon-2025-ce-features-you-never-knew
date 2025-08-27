@@ -41,4 +41,3 @@ Notes:
 
 - *.godbolt.org
 - compiler-explorer.com, godbo.lt
-- "goo.gl" links trauma
