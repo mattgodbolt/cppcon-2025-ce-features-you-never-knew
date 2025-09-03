@@ -94,8 +94,8 @@
         plugins: [Markdown, CompilerExplorer, Highlight, RevealNotes],
         totalTime: 68 * 60,
         ce: {
-          defaultCompiler: "g142",
-          defaultCompilerOptions: "-march=skylake",
+          defaultCompiler: "g152",
+          defaultCompilerOptions: "-march=skylake -Wall -Wextra -Werror",
           maxLineLength: 100,
         },
       });
@@ -108,8 +108,7 @@
             event.currentSlide.classList.contains("hide-footer")
           );
       };
-      Reveal.on("ready", hideyMcHideFace);        console.log(event.currentSlide.classList);
-
+      Reveal.on("ready", hideyMcHideFace);
       Reveal.on("slidechanged", hideyMcHideFace);
     </script>
   </body>
