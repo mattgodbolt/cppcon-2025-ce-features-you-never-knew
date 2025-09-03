@@ -95,7 +95,8 @@
         totalTime: 68 * 60,
         ce: {
           defaultCompiler: "g152",
-          defaultCompilerOptions: "-march=skylake -Wall -Wextra -Werror",
+          defaultCompilerOptions: "-march=skylake",
+          additionalCompilerOptions: "-Wall -Wextra -Werror -std=c++2c",
           maxLineLength: 100,
         },
       });

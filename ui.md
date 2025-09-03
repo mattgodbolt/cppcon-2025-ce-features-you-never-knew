@@ -36,6 +36,56 @@ Notes:
 
 ---
 
+## Tools
+
+```cpp
+// setup
+  #include <array>
+  #include <algorithm>
+  #include <numeric>
+
+auto silly_sum() {
+  std::array<unsigned, 82> numbers;
+  std::ranges::iota(numbers, 1);
+  return std::ranges::fold_left_first(
+    numbers, std::plus{}
+  );
+}
+```
+
+<!-- .element: data-ce -->
+
+Notes:
+- Stack usage
+- Optimization view, -O1 -O2 -O3
+- clang is better
+- can show eventually clang gives up 
+
+---
+
+## Overrides & Flags
+
+```cpp
+// todo not this one
+unsigned approx_log2(unsigned num) {
+  unsigned result = 0;
+  while (num) {
+    result++;
+    num >>= 1;
+  }
+  return result;
+}
+```
+
+<!-- .element: data-ce data-ce-options="-pedantic -Wshadow -Wconversion" -->
+
+Notes:
+- need a better example that needs actual flags and selection of compiler doodad
+- pop out flags
+- show overrides
+
+---
+
 ## Execution
 
 ```cpp
