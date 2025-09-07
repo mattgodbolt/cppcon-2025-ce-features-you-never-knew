@@ -1,12 +1,3 @@
-## About me
-
-- Games
-- C++ Tools
-- Google
-- Finance
-
----
-
 <img src="images/CE.png" class="r-stretch">
 
 ---

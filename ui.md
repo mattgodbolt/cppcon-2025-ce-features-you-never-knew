@@ -57,21 +57,41 @@ auto silly_sum() {
 
 Notes:
 - Stack usage
-- Optimization view, -O1 -O2 -O3
+- -O1 -O2 -O3
 - clang is better
 - can show eventually clang gives up 
+
+---
+
+## Tools
+
+```cpp
+// setup
+  #include <cstdio>
+
+int main() {
+  puts("hello cppcon");
+}
+
+```
+
+<!-- .element: data-ce -->
+
+Notes:
+- Readelf
+- nm
+- strings
 
 ---
 
 ## Overrides & Flags
 
 ```cpp
-// todo not this one
-unsigned approx_log2(unsigned num) {
+auto num_bits_set(unsigned long num) {
   unsigned result = 0;
   while (num) {
     result++;
-    num >>= 1;
+    num &= num - 1;
   }
   return result;
 }
@@ -80,9 +100,9 @@ unsigned approx_log2(unsigned num) {
 <!-- .element: data-ce data-ce-options="-pedantic -Wshadow -Wconversion" -->
 
 Notes:
-- need a better example that needs actual flags and selection of compiler doodad
-- pop out flags
+- optimization view
 - show overrides
+- pop out flags
 
 ---
 
@@ -90,9 +110,13 @@ Notes:
 
 ```cpp
 #include <cstdio>
+#include <span>
 
-int main() {
-  puts("hello world");
+int main(int argc, const char *argv[]) {
+  puts("Greetings to:");
+  for (auto arg : std::span<const char *>(argv, argv + argc)) {
+    puts(arg);
+  }
 }
 ```
 <!-- .element: data-ce -->
@@ -170,31 +194,7 @@ float sum_of_squares(std::span<const float, 1024> array) {
 
 Notes:
 - CFG
-- OPT warnings?
-- IR views
-- Stack use
-- pipeline viewer (with useful thing)
-- LLVM MCA (my favourite)
-
----
-
-## Analysis tools
-
-```cpp
-unsigned population_count(unsigned input) {
-    unsigned result = 0;
-    while (input) {
-        result++;
-        input &= input - 1;
-    }
-    return result;
-}
-```
-<!-- .element: data-ce data-ce-options="-O3" -->
-
-Notes:
-- CFG
-- OPT warnings?
+- OPT warnings? if not done earlier
 - IR views
 - Stack use
 - pipeline viewer (with useful thing)
