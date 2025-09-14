@@ -14,3 +14,7 @@
 - windows support
 - Ubuntu 24 migration
 - "goo.gl" links issue
+
+---
+
+## Questions
