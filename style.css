@@ -2,6 +2,10 @@
   display: none;
 }
 
+.reveal pre {
+  font-size: 0.70em !important;
+}
+
 .container {
   display: flex;
   justify-content: center;

@@ -183,7 +183,7 @@ Notes:
 ```cpp
 // setup
   #include <span>
-[[gnu::attribute("")]]
+//[[gnu::optimize("")]]
 float sum_of_squares(std::span<const float, 1024> array) {
   float result = 0.f;
   for (const auto f : array) result += f * f;
